@@ -1,10 +1,8 @@
 <template>
   <div>
     <v-container>
-      <!-- Кнопка добавления поста -->
       <v-btn color="primary" @click="openAddPostDrawer">Добавить пост</v-btn>
 
-      <!-- Таблица постов -->
       <v-data-table
         :headers="headers"
         :items="posts"
@@ -19,7 +17,6 @@
       </v-data-table>
     </v-container>
 
-    <!-- Navigation Drawer для редактирования поста -->
     <v-navigation-drawer 
       v-model="drawer" 
       absolute 
@@ -49,7 +46,6 @@
       </v-card>
     </v-navigation-drawer>
 
-    <!-- Navigation Drawer для добавления поста -->
     <v-navigation-drawer 
       v-model="addDrawer" 
       absolute 
@@ -77,7 +73,6 @@
       </v-card>
     </v-navigation-drawer>
 
-    <!-- Диалог подтверждения удаления -->
     <v-dialog v-model="deleteDialog" max-width="500px">
       <v-card>
         <v-card-title class="headline">Подтверждение удаления</v-card-title>

@@ -8,10 +8,10 @@ Vue.use(Router);
 const routes =  [
     { path: '/one', name: 'One', component: TabOne },
     { path: '/two', name: 'Two', component: TabTwo },
-    { path: '*', redirect: '/one' } // Redirect unknown paths to /one
+    { path: '*', redirect: '/one' }
   ];
 
 export default new Router({
-  mode: 'history', // Используем history API для красивых URL
+  mode: 'history',
   routes,
 });
